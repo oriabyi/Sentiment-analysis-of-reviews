@@ -1,0 +1,36 @@
+{% extends "bootstrap/base.html" %}
+{% block title %}Tonality analysis{% endblock %}
+{% block content %}
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 text-center" style="color:#01032a;">
+                <form method="POST">
+                    {{ form.name.label }} 
+                    {{ form.name(size=200,
+                    	class="form-control row",
+                    	rows=5,
+                    	id="review",
+                    	required="required", 
+                      	placeholder="Write your feedback here") }}
+                    <br>
+                    <br>
+                    <br>
+                    <div class="col-md-4 text-center">
+                    </div>
+                    <div class="col-md-4 text-center" style="color:#01032a;">
+                        {{ form.submit(class="btn btn-lg btn-block" ) }}
+                        {{ form.hidden_tag() }}
+                    </div>
+                    <div class="col-md-4 text-center">
+                    </div>
+                </form>
+                <br>
+                <br>
+                <br>
+                <div class="col-md-12 text-center" style="color:#01032a;">
+                    <h1>{{ name }}</h1>
+                </div>    
+            </div>
+        </div>		
+    </div>	
+{% endblock %}
